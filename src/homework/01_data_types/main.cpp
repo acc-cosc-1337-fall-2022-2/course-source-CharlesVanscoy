@@ -1,4 +1,10 @@
-﻿//write include statements
+﻿/*
+ * Filename: main.cpp
+ * Last modified by: Charles VanScoy
+ * Modified date: 9/10/2022
+*/
+
+//write include statements
 #include <iostream>
 #include "data_types.h"
 
