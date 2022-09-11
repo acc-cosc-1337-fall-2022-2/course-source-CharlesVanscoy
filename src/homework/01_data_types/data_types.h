@@ -7,6 +7,6 @@
 //example function add_numbers adds two integer inputs, outputs integer
 int add_numbers(int num1, int num2);
 
-//function multiply_numbers multiplies two integer inputs, outputs integer
-int multiply_numbers(int num1, int num2);
+//function multiply_numbers multiplies one integer input times 5, outputs integer
+int multiply_numbers(int num1);
 

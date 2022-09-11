@@ -17,10 +17,9 @@ Call multiply_numbers with 10 and 10 parameter values and display function resul
 
 int main()
 {
-	int product, input1, input2;
+	int product, input1;
 	input1 = 10;
-	input2 = 10;
-	product = multiply_numbers(input1, input2);
-	cout << input1 << " X " << input2 << " = " << product;
+	product = multiply_numbers(input1);
+	cout << input1 << " X " << "5" << " = " << product;
 	return product;
 }
