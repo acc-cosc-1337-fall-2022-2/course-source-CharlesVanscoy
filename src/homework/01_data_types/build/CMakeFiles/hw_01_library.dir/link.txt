@@ -1,0 +1,2 @@
+C:\msys64\mingw64\bin\ar.exe qc libhw_01_library.a CMakeFiles/hw_01_library.dir/data_types.cpp.obj
+C:\msys64\mingw64\bin\ranlib.exe libhw_01_library.a
