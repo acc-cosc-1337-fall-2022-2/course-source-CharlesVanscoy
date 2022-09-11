@@ -9,7 +9,7 @@ TEST_CASE("Verify sum_numbers function")
 {
 	REQUIRE(add_numbers(5, 5) == 10);
 	REQUIRE(add_numbers(10, 10) == 20);
-	REQUIRE(multiply_numbers(5) == 25);
+	REQUIRE(multiply_numbers(2) == 10);
 	REQUIRE(multiply_numbers(10) == 50);
 }
 
