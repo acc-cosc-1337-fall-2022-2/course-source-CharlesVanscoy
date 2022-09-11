@@ -9,7 +9,8 @@
 #include "data_types.h"
 
 //write namespace using statement for cout
-using namespace std;
+using std::cout;
+using std::cin;
 
 /*
 Call multiply_numbers with 10 and 10 parameter values and display function result
@@ -17,9 +18,14 @@ Call multiply_numbers with 10 and 10 parameter values and display function resul
 
 int main()
 {
-	int product, input1;
-	input1 = 10;
-	product = multiply_numbers(input1);
-	cout << input1 << " X " << "5" << " = " << product;
-	return product;
+	int num;
+	cin >> num;
+	int result;
+	result = multiply_numbers(num);
+	cout << result;
+	int num1;
+	num1 = 4;
+	result = multiply_numbers(num1);
+ 	cout << result;
+	return 0;
 }
