@@ -1,0 +1,2 @@
+C:\msys64\mingw64\bin\ar.exe qc libhw_02_library.a CMakeFiles/hw_02_library.dir/hwexpressions.cpp.obj
+C:\msys64\mingw64\bin\ranlib.exe libhw_02_library.a

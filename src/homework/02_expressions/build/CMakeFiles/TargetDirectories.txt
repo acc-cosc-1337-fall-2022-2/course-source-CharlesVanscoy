@@ -1,0 +1,4 @@
+C:/Users/15122/Documents/cosc/src/homework/02_expressions/build/CMakeFiles/hw_02_library.dir
+C:/Users/15122/Documents/cosc/src/homework/02_expressions/build/CMakeFiles/hw_02_exe.dir
+C:/Users/15122/Documents/cosc/src/homework/02_expressions/build/CMakeFiles/edit_cache.dir
+C:/Users/15122/Documents/cosc/src/homework/02_expressions/build/CMakeFiles/rebuild_cache.dir
