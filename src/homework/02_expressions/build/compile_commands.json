@@ -1,0 +1,17 @@
+[
+{
+  "directory": "C:/Users/15122/Documents/cosc/src/homework/02_expressions/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\hw_02_library.dir\\hwexpressions.cpp.obj -c C:\\Users\\15122\\Documents\\cosc\\src\\homework\\02_expressions\\hwexpressions.cpp",
+  "file": "C:/Users/15122/Documents/cosc/src/homework/02_expressions/hwexpressions.cpp"
+},
+{
+  "directory": "C:/Users/15122/Documents/cosc/src/homework/02_expressions/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\hw_02_exe.dir\\main.cpp.obj -c C:\\Users\\15122\\Documents\\cosc\\src\\homework\\02_expressions\\main.cpp",
+  "file": "C:/Users/15122/Documents/cosc/src/homework/02_expressions/main.cpp"
+},
+{
+  "directory": "C:/Users/15122/Documents/cosc/src/homework/02_expressions/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\hw_02_exe.dir\\hwexpressions.cpp.obj -c C:\\Users\\15122\\Documents\\cosc\\src\\homework\\02_expressions\\hwexpressions.cpp",
+  "file": "C:/Users/15122/Documents/cosc/src/homework/02_expressions/hwexpressions.cpp"
+}
+]

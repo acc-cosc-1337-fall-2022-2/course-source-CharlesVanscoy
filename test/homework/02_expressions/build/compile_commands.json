@@ -1,0 +1,7 @@
+[
+{
+  "directory": "C:/Users/15122/Documents/cosc/test/homework/02_expressions/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\hw_02_tests.dir\\02_expressions_tests.obj -c C:\\Users\\15122\\Documents\\cosc\\test\\homework\\02_expressions\\02_expressions_tests.cpp",
+  "file": "C:/Users/15122/Documents/cosc/test/homework/02_expressions/02_expressions_tests.cpp"
+}
+]
