@@ -1,7 +1,12 @@
+//Charles Vanscoy
+//09/24/2022
+//COSC 1337
+
 //write include statement for decisions header
 #include "decisions.h"
 
 //Write code for function(s) code here
+//This function takes an integer and returns a letter grade using an if elif else structure
 string get_letter_grade_using_if(int grade) {
     string letter_grade;
     if (grade <= 59 && grade >= 0) {
@@ -24,7 +29,7 @@ string get_letter_grade_using_if(int grade) {
     }
     return letter_grade;
 }
-
+//This function takes an integer and returns a letter grade using a switch statement
 string get_letter_grade_using_switch(int grade) {
     string letter_grade;
     switch (grade) {

@@ -1,6 +1,11 @@
+//Charles Vanscoy
+//09/24/2022
+//COSC 1337
+
 //write include statements
 #include "decisions.h"
 
+//Prompts user for grade conversion method, calls apropriate function, and displays the letter grade to the screen
 int main() 
 {
 	int choice;
