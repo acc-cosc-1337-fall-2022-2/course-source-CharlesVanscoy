@@ -1,3 +1,7 @@
+//Charles Vanscoy
+//10/02/2022
+//COSC 1337
+
 //add include statements
 #include <iostream>
 #include <string>
