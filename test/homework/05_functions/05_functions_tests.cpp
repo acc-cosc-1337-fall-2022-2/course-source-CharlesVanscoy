@@ -13,8 +13,10 @@ TEST_CASE("Test function get_gc_content") {
 
 TEST_CASE("Test function get_reverse_string") {
 	REQUIRE(reverse_string("AGCTATAG") == "GATATCGA");
+	REQUIRE(reverse_string("CGCTATAG") == "GATATCGC");
 }
 
 TEST_CASE("Test function get dna compliment") {
-	REQUIRE(true == true);
+	REQUIRE(get_dna_complement("AAAACCCGGT") == "ACCGGGTTTT");
+	REQUIRE(get_dna_complement("CCCGGAAAAT") == "ATTTTCCGGG");
 }

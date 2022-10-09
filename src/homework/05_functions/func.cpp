@@ -34,6 +34,7 @@ string get_dna_complement(string dna){
         }
         i++;
     }
+    dna_comp = reverse_string(dna_comp);
     return dna_comp;
 }
 
