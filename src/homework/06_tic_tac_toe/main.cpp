@@ -28,12 +28,11 @@ int main()
 	bool exit;
 	bool finish;
 	string choice;
-	vector<int> taken(1, 0);
 	bool fin;
 
 	while(exit != true){
 		board.start_game(first_player);
-
+		vector<int> taken(1, 0);
 		do{
 			cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
 			board.display_board();
