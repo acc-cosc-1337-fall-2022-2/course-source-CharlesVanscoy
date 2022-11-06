@@ -1,8 +1,12 @@
-﻿//example
+﻿/*
+ * Filename: data_types.h
+ * Last modified by: Charles VanScoy
+ * Modified date: 9/10/2022
+*/ 
+
+//example function add_numbers adds two integer inputs, outputs integer
 int add_numbers(int num1, int num2);
 
-//write function prototype here
-
-
-
+//function multiply_numbers multiplies one integer input times 5, outputs integer
+int multiply_numbers(int num1);
 

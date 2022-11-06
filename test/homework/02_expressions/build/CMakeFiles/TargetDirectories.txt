@@ -1,0 +1,3 @@
+C:/Users/15122/Documents/cosc/test/homework/02_expressions/build/CMakeFiles/hw_02_tests.dir
+C:/Users/15122/Documents/cosc/test/homework/02_expressions/build/CMakeFiles/edit_cache.dir
+C:/Users/15122/Documents/cosc/test/homework/02_expressions/build/CMakeFiles/rebuild_cache.dir
