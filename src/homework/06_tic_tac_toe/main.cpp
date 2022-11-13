@@ -1,9 +1,11 @@
-
 #include "tic_tac_toe.h"
+#include "tic_tac_toe_manager.h"
+
 
 int main() 
 {
 	TicTacToe board;
+	TicTacToeManager manager;
 	string first_player;
 
 	do{
@@ -26,28 +28,30 @@ int main()
 
 	int position; 
 	bool exit;
-	bool finish;
+	int x_win;
+	int o_win;
+	int ties;
 	string choice;
-	bool fin;
+	bool go;
+
+	
 
 	while(exit != true){
 		board.start_game(first_player);
-		vector<int> taken(1, 0);
+
 		do{
-			cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
-			
+		cout<<board;
+		cin>>board;
+		} while(board.game_over() == false);
 
-			
-			board.mark_board(position);
-			taken.push_back(position);
-			finish = board.game_over();
-		}while (finish == false);
-
-		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
+		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
 		
 		cout << "\nPlayer \"" << board.get_winner() << "\" has won the game!";
-		cout << "\n\nDo you want to quit? (Enter y to exit)";
+		manager.save_game(board);
+		std::cout << "\n\nDo you want to quit? (Enter y to exit)";
 		cin >> choice;
+		manager.get_winner_total(o_win, x_win, ties);
+		cout << "\nX won " << x_win << " times. O won " << o_win << " times. And they tied " << ties <<" times.\n\n";
 		if(choice == "y" || choice == "Y")
 			exit = true;
 	}

@@ -6,6 +6,8 @@ using std::cout;
 using std::cin;
 using std::string;
 using std::vector;
+#ifndef TICTACTOE_H
+#define TICTACTOE_H
 
 class TicTacToe{
     public:
@@ -30,3 +32,5 @@ class TicTacToe{
         bool check_board_full();
         void set_next_player();
 };
+
+#endif

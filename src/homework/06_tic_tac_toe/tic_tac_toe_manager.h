@@ -1,5 +1,7 @@
 //h
 #include "tic_tac_toe.h"
+#ifndef TICTACTOEMANAGER_H
+#define TICTACTOEMANAGER_H
 
 class TicTacToeManager{
     public:
@@ -13,3 +15,5 @@ class TicTacToeManager{
         int ties = 0;
         void update_winner_count(string winner);
 };
+
+#endif

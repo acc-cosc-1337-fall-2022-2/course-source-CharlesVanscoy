@@ -179,11 +179,13 @@ TEST_CASE("Test Manager Class Function get_winner_total"){
 	test_game_ty.mark_board(1);
 	REQUIRE(test_game_ty.game_over() == true);
 	REQUIRE(test_game_ty.get_winner() == "C");
+	test_manager.save_game(test_game_ty);
 
 	int x;
 	int o;
 	int ty;
 	test_manager.get_winner_total(o,x,ty);
+	cout << o << x << ty;
 
 	REQUIRE(((x == 1) && (o == 1) && (ty == 1)));
 }

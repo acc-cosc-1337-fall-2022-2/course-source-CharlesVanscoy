@@ -115,20 +115,21 @@ std::istream& operator>>(std::istream& in, TicTacToe& game){
             cout << "Presente un numero entre 1 y 9, por favor.";
             fail = true;
         }
-        if(game.pegs[position-1] != " "){
+        else if(game.pegs[position-1] != " "){
             cout << "No puedes escoger este posición porque ya esta lleno. Escoja un posición nuevo, por favor.";
             fail = true;
         }
-        if(fail = false){
+        else{
             game.mark_board(position);
+            fail = false;
         }        
-    }while(fail = true);
+    }while(fail == true);
     
     return in;				
 }
 
 std::ostream& operator<<(std::ostream& out, const TicTacToe& game){
-    cout << "| " << game.pegs[0] << " | " << game.pegs[1] << " | " << game.pegs[2] << " |\n"\
+    std::cout << "| " << game.pegs[0] << " | " << game.pegs[1] << " | " << game.pegs[2] << " |\n"\
         << "| " << game.pegs[3] << " | " << game.pegs[4] << " | " << game.pegs[5] << " |\n"\
         << "| " << game.pegs[6] << " | " << game.pegs[7] << " | " << game.pegs[8] << " |\n";
     return out;
