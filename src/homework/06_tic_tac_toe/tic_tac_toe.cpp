@@ -4,15 +4,17 @@
 
 #include "tic_tac_toe.h"
 
+//TicTacToe::TicTacToe(int v_size) : size(v_size), pegs((v_size * v_size), " "){}
+
 void TicTacToe::clear_board() {
-    for (int i = 0; i < 9; i++) {
+    for (int i = 0; i < pegs.size(); i++) {
         pegs[i] = " ";
     }
 }
 
 bool TicTacToe::check_board_full() {
     for (int i = 0; i < 9; i++) {
-        if (pegs[i] == " ") {
+        if (TicTacToe::pegs[i] == " ") {
             return false;
         }
     }
@@ -45,7 +47,7 @@ void TicTacToe::mark_board(int position) {
 }
 
 void TicTacToe::start_game(string first_player) {
-    player = first_player;
+    TicTacToe::player = first_player;
     clear_board();
 }
 
@@ -63,31 +65,15 @@ bool TicTacToe::game_over(){
 }
 
 bool TicTacToe::check_column_win(){
-    bool win = false;
-    for (int i = 0; i < 3; i++){
-        if((pegs[i] == pegs[i+3]) && (pegs[i+3] == pegs[i+6]) && (pegs[i] != " ")){
-            win =  true;
-        }
-    }
-    return win;
+    return false;
 }
 
 bool TicTacToe::check_row_win(){
-    bool win = false;
-    for (int i = 0; i < 3; i++){
-        if((pegs[((3 * i))] == pegs[(1 + (3 * i))]) && (pegs[(1 + ((3 * i)))] == pegs[(2 + (3 * i))]) && (pegs[(3 * i)] != " ")){
-            win =  true;
-        }
-    }
-    return win;
+    return false;
 }
 
 bool TicTacToe::check_diagonal_win(){
-    bool win = false;
-    if(((pegs[0] == pegs[4]) && (pegs[4] == pegs[8]) && (pegs[4] != " ")) || ((pegs[2] == pegs[4]) && (pegs[4] == pegs[6]) && (pegs[4] != " "))){
-            win = true;
-    }
-    return win;
+    return false;
 }
 
 void TicTacToe::set_winner(){
@@ -108,14 +94,22 @@ std::istream& operator>>(std::istream& in, TicTacToe& game){
     int position;
     do{
         fail = false;
-		cin >> position;
+        cin >> position;
         cin.clear();
         cin.sync();
-        if(position != 1 && position != 2 && position != 3 && position != 4 && position != 5 && position != 6 && position != 7 && position != 8 && position != 9){
-            cout << "Presente un numero entre 1 y 9, por favor.";
-            fail = true;
+        //if(position != 1 && position != 2 && position != 3 && position != 4 && position != 5 && position != 6 && position != 7 && position != 8 && position != 9){
+        //    cout << "Presente un numero entre 1 y 9, por favor.";
+        //    fail = true;
+        //}
+        for(int i; i < game.pegs.size(); i++){
+            if(position = i){
+                fail = false;
+            }
+            else{
+                fail = true;
+            }
         }
-        else if(game.pegs[position-1] != " "){
+        if(game.pegs[position-1] != " "){
             cout << "No puedes escoger este posición porque ya esta lleno. Escoja un posición nuevo, por favor.";
             fail = true;
         }
@@ -129,8 +123,16 @@ std::istream& operator>>(std::istream& in, TicTacToe& game){
 }
 
 std::ostream& operator<<(std::ostream& out, const TicTacToe& game){
-    std::cout << "| " << game.pegs[0] << " | " << game.pegs[1] << " | " << game.pegs[2] << " |\n"\
-        << "| " << game.pegs[3] << " | " << game.pegs[4] << " | " << game.pegs[5] << " |\n"\
-        << "| " << game.pegs[6] << " | " << game.pegs[7] << " | " << game.pegs[8] << " |\n";
+    if(game.pegs.size() == 9){
+        std::cout << "| " << game.pegs[0] << " | " << game.pegs[1] << " | " << game.pegs[2] << " |\n"\
+            << "| " << game.pegs[3] << " | " << game.pegs[4] << " | " << game.pegs[5] << " |\n"\
+            << "| " << game.pegs[6] << " | " << game.pegs[7] << " | " << game.pegs[8] << " |\n";
+    }
+    else{
+        std::cout << "| " << game.pegs[0] << " | " << game.pegs[1] << " | " << game.pegs[2] << " | " << game.pegs[3] << " |\n"\
+            << "| " << game.pegs[4] << " | " << game.pegs[5] << " | " << game.pegs[6] << " | " << game.pegs[7] << " |\n"\
+            << "| " << game.pegs[8] << " | " << game.pegs[9] << " | " << game.pegs[10] << " | " << game.pegs[11] << " |\n"\
+            << "| " << game.pegs[12] << " | " << game.pegs[13] << " | " << game.pegs[14] << " | " << game.pegs[15] << " |\n";
+    }
     return out;
 }

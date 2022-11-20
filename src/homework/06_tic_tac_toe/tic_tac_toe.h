@@ -1,6 +1,6 @@
 //h
-#include <Vector>
-#include <String>
+#include <vector>
+#include <string>
 #include <iostream>
 using std::cout;
 using std::cin;
@@ -11,6 +11,9 @@ using std::vector;
 
 class TicTacToe{
     public:
+        TicTacToe(){}
+        TicTacToe(int size):pegs(size*size, " "){}
+        int size;
         string get_winner();
         void display_board() const;
         string get_player() const;
@@ -19,14 +22,16 @@ class TicTacToe{
         bool game_over();
         friend std::ostream& operator<<(std::ostream& out, const TicTacToe& game);
         friend std::istream& operator>>(std::istream& in, TicTacToe& game);
+    
+    protected:
+        std::vector<std::string> pegs;
+        virtual bool check_column_win();
+        virtual bool check_row_win();
+        virtual bool check_diagonal_win();
 
     private:
         string winner;
         string player;
-        vector <string> pegs{" ", " ", " ", " ", " ", " ", " ", " ", " ",};
-        bool check_column_win();
-        bool check_row_win();
-        bool check_diagonal_win();
         void set_winner();
         void clear_board();
         bool check_board_full();
