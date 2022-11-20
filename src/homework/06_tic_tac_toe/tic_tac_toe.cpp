@@ -13,7 +13,7 @@ void TicTacToe::clear_board() {
 }
 
 bool TicTacToe::check_board_full() {
-    for (int i = 0; i < 9; i++) {
+    for (int i = 0; i < pegs.size(); i++) {
         if (TicTacToe::pegs[i] == " ") {
             return false;
         }
@@ -53,7 +53,10 @@ void TicTacToe::start_game(string first_player) {
 
 bool TicTacToe::game_over(){
     bool fin = false;
-    if (check_column_win() == true || check_diagonal_win() == true || check_row_win() == true){
+    bool callwin = check_column_win();
+    bool diawin = check_diagonal_win();
+    bool rowin = check_row_win();
+    if ((check_column_win() == true) || (check_diagonal_win() == true) || (check_row_win() == true)){
         set_winner();
         fin = true;
     }
@@ -101,8 +104,8 @@ std::istream& operator>>(std::istream& in, TicTacToe& game){
         //    cout << "Presente un numero entre 1 y 9, por favor.";
         //    fail = true;
         //}
-        for(int i; i < game.pegs.size(); i++){
-            if(position = i){
+        for(int i = 1; i <= game.pegs.size(); i++){
+            if(position == i){
                 fail = false;
             }
             else{
@@ -124,12 +127,14 @@ std::istream& operator>>(std::istream& in, TicTacToe& game){
 
 std::ostream& operator<<(std::ostream& out, const TicTacToe& game){
     if(game.pegs.size() == 9){
-        std::cout << "| " << game.pegs[0] << " | " << game.pegs[1] << " | " << game.pegs[2] << " |\n"\
+        std::cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"\
+            << "| " << game.pegs[0] << " | " << game.pegs[1] << " | " << game.pegs[2] << " |\n"\
             << "| " << game.pegs[3] << " | " << game.pegs[4] << " | " << game.pegs[5] << " |\n"\
             << "| " << game.pegs[6] << " | " << game.pegs[7] << " | " << game.pegs[8] << " |\n";
     }
     else{
-        std::cout << "| " << game.pegs[0] << " | " << game.pegs[1] << " | " << game.pegs[2] << " | " << game.pegs[3] << " |\n"\
+        std::cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"\
+            << "| " << game.pegs[0] << " | " << game.pegs[1] << " | " << game.pegs[2] << " | " << game.pegs[3] << " |\n"\
             << "| " << game.pegs[4] << " | " << game.pegs[5] << " | " << game.pegs[6] << " | " << game.pegs[7] << " |\n"\
             << "| " << game.pegs[8] << " | " << game.pegs[9] << " | " << game.pegs[10] << " | " << game.pegs[11] << " |\n"\
             << "| " << game.pegs[12] << " | " << game.pegs[13] << " | " << game.pegs[14] << " | " << game.pegs[15] << " |\n";

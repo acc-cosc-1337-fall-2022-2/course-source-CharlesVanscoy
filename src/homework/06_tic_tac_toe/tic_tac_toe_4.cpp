@@ -13,7 +13,7 @@ false
 bool TTT_4::check_column_win(){
     bool win = false;
     for (int i = 0; i < 4; i++){
-        if((pegs[i] == pegs[i+3]) && (pegs[i+3] == pegs[i+6]) && (pegs[i+6] == pegs[i+9]) && (pegs[i] != " ")){
+        if((pegs[i] == pegs[i+4]) && (pegs[i+4] == pegs[i+8]) && (pegs[i+8] == pegs[i+12]) && (pegs[i] != " ")){
             win =  true;
         }
     }
@@ -33,7 +33,7 @@ Win by row if
 bool TTT_4::check_row_win(){
     bool win = false;
     for (int i = 0; i < 3; i++){
-        if((pegs[((3 * i))] == pegs[(1 + (3 * i))]) && (pegs[(1 + ((3 * i)))] == pegs[(2 + (3 * i))]) && (pegs[(2 + (3 * i))] == pegs[(3 + (3 * i))]) && (pegs[(3 * i)] != " ")){
+        if((pegs[((4 * i))] == pegs[(1 + (4 * i))]) && (pegs[(1 + ((4 * i)))] == pegs[(2 + (4 * i))]) && (pegs[(2 + (4 * i))] == pegs[(3 + (4 * i))]) && (pegs[(4 * i)] != " ")){
             win =  true;
         }
     }
@@ -52,7 +52,7 @@ Win diagonally
 */
 bool TTT_4::check_diagonal_win(){
     bool win = false;
-    if(((pegs[0] == pegs[5]) && (pegs[5] == pegs[10]) && (pegs[10] == pegs[15]) && (pegs[5] != " ")) || ((pegs[3] == pegs[6]) && (pegs[6] == pegs[9]) && (pegs[9] == pegs[12]) && (pegs[6] != " ")) || ((pegs[2] == pegs[4]) && (pegs[4] == pegs[6]) && (pegs[4] != " "))){
+    if(((pegs[0] == pegs[5]) && (pegs[5] == pegs[10]) && (pegs[10] == pegs[15]) && (pegs[5] != " ")) || ((pegs[3] == pegs[6]) && (pegs[6] == pegs[9]) && (pegs[9] == pegs[12]) && (pegs[6] != " "))){
             win = true;
     }
     return win;

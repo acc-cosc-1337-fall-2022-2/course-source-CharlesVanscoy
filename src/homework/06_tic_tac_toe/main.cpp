@@ -1,4 +1,4 @@
-#include "tic_tac_toe.h"
+//#include "tic_tac_toe.h"
 #include "tic_tac_toe_manager.h"
 #include "tic_tac_toe_3.h"
 #include "tic_tac_toe_4.h"
@@ -22,12 +22,12 @@ int main()
             board_size = 0;
             cout << "\nInvalid input, try again\n\n";
         }
-		else if(board_size == 3){
-			board = make_unique<TTT_3>();
-		}
-		else if(board_size == 4){
-			board = make_unique<TTT_4>();
-		}
+		// else if(board_size == 3){
+		// 	board = make_unique<TTT_3>();
+		// }
+		// else if(board_size == 4){
+		// 	board = make_unique<TTT_4>();
+		// }
 
     } while (board_size == 0);
 
@@ -60,6 +60,14 @@ int main()
 	
 
 	while(exit != true){
+		
+		if(board_size == 3){
+			board = make_unique<TTT_3>();
+		}
+		else if(board_size == 4){
+			board = make_unique<TTT_4>();
+		}
+		
 		board->start_game(first_player);
 
 		do{
